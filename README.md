@@ -19,7 +19,7 @@ contains my solutions for each of the challenges.
 ## Solutions
 
 ### 2024
-- [Day 1: Historian Hysteria (Part 1)](2024/day1/main.py)
+- [Day 1: Historian Hysteria (Part 1)](src/2024/day1/main.py)
 - [Day 1: Historian Hysteria (Part 2)](2024/day1/main.py)
 
 [//]: # (- [Day 3: Title of the Puzzle]&#40;2024/day3.md&#41;)
