@@ -1,4 +1,4 @@
-with open("../inputs/day1.txt") as file:
+with open("../../inputs/day1.txt") as file:
     numbers = file.read().split()
 
 if __name__ == '__main__':
