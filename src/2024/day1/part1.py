@@ -1,5 +1,9 @@
+from pathlib import Path
+
+INPUT_PATH = Path(__file__).parent.parent.joinpath("inputs/day1.txt")
+
 if __name__ == '__main__':
-    with open("../../inputs/day1.txt") as file:
+    with INPUT_PATH.open("r") as file:
         numbers = file.read().split()
 
     right_digits = []
