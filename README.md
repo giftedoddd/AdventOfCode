@@ -8,7 +8,7 @@ coding challenges each day in December, leading up to Christmas. This repository
 
 - [About](#about)
 - [Solutions](#solutions)
-  - [2024](#2024)
+  - [2024](src/2024)
 
 ## About
 
