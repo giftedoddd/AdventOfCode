@@ -21,6 +21,5 @@ contains my solutions for each of the challenges.
 ### 2024
 - [Day 1: Historian Hysteria (Part 1)](src/2024/day1/part1.py)
 - [Day 1: Historian Hysteria (Part 2)](src/2024/day1/part2.py)
-
-[//]: # (- [Day 3: Title of the Puzzle]&#40;2024/day3.md&#41;)
-[//]: # (- ...)
+- [Day 2: Red-Nosed Reports (Part 1)](src/2024/day2/part1.py)
+- [Day 2: Red-Nosed Reports (Part 2)](src/2024/day2/part2.py)
