@@ -1,19 +1,21 @@
 from pathlib import Path
 
+CLEAN_LIST = []
+
 def get_data():
     data_path = Path(__file__).parent.parent.joinpath("inputs/day3.txt")
     with data_path.open("r") as data_:
         return data_.read()
 
-def multiply(items: list):
+def multiply():
     result_ = 0
-    for item in items:
+    for item in CLEAN_LIST:
         values = item.split(",")
         result_ += int(values[0]) * int(values[1])
     return result_
 
 def clean_up(data):
-    clean = []
+    global CLEAN_LIST
 
     index_ = 0
     while True:
@@ -36,13 +38,34 @@ def clean_up(data):
             index_ += 1
             continue
 
-        clean.append(data[index_ + 4: next_parentheses])
+        CLEAN_LIST.append(data[index_ + 4: next_parentheses])
         index_ += 1
 
-    return clean
+def get_pattern(data):
+    state = False
+    starting_point = 0
+    while True:
+        try:
+            do_index = data.index("do()", starting_point)
+            dont_index = data.index("don't()", starting_point)
+        except ValueError:
+            break
+
+        nearest = do_index if dont_index > do_index else dont_index
+
+        if starting_point > nearest:
+            state = True
+
+        if not state:
+            clean_up(data[starting_point:nearest])
+            starting_point += nearest
+            continue
+
+        clean_up(data[do_index:dont_index])
+        starting_point = dont_index + 1
 
 if __name__ == '__main__':
     input_data = get_data()
-    safe_list = clean_up(input_data)
-    result = multiply(safe_list)
+    get_pattern(input_data)
+    result = multiply()
     print(result)
