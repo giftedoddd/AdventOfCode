@@ -1,6 +1,6 @@
 from pathlib import Path
 
-INPUT_PATH = Path(__file__).parent.parent.joinpath("inputs/day1-part1.txt")
+INPUT_PATH = Path(__file__).parent.parent.joinpath("inputs/day1.txt")
 
 if __name__ == '__main__':
     with INPUT_PATH.open("r") as file:

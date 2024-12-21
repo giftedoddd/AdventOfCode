@@ -1,6 +1,6 @@
 from pathlib import Path
 
-INPUT_PATH = Path(__file__).parent.parent.joinpath("inputs/day2-part1.txt")
+INPUT_PATH = Path(__file__).parent.parent.joinpath("inputs/day2.txt")
 
 def get_inputs():
     with INPUT_PATH.open("r") as text_file:
